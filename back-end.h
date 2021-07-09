@@ -14,7 +14,7 @@ bool draw = false;
 void showBoard() {
 
     //Dispay the layout of the baord
-    cout << "NB* Board layout configured according to standard NUMPAD layout\n\n";
+    
     cout << "PLAYER 1 [X]\t PLAYER  2 [O]\n\n";
     cout << "\t\t__________________\n";
     cout << "\t\t|     |     |     | \n";
