@@ -31,5 +31,6 @@ int main()
                  cout << "\n\nThis Game was a draw\n\n";
 
 
+        system("pause");
 	return 0;
 }

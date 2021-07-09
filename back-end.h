@@ -4,13 +4,12 @@
 using namespace std;
 
 char board[3][3] = { {'1','2','3'},{'4','5','6'},{'7','8','9'} };
-//Variable Declaration
 int choice;
 int row, column;
 char turn = 'X';
 bool draw = false;
 
-//Function to show the current status of the gaming board
+//This function displays configuration of the game board
 
 void showBoard() {
 
@@ -19,13 +18,13 @@ void showBoard() {
     cout << "PLAYER - 1 [X]\t PLAYER - 2 [O]\n\n";
     cout << "\t\t__________________\n";
     cout << "\t\t|     |     |     | \n";
-    cout << "\t\t|  " << board[0][0] << "  |  " << board[0][1] << "  |  " << board[0][2] << "  |\n";
+    cout << "\t\t|  " << board[2][0] << "  |  " << board[2][1] << "  |  " << board[2][2] << "  |\n";
     cout << "\t\t|_____|_____|_____|\n";
     cout << "\t\t|     |     |     |\n";
     cout << "\t\t|  " << board[1][0] << "  |  " << board[1][1] << "  |  " << board[1][2] << "  |\n";
     cout << "\t\t|_____|_____|_____|\n";
     cout << "\t\t|     |     |     |\n";
-    cout << "\t\t|  " << board[2][0] << "  |  " << board[2][1] << "  |  " << board[2][2] << "  |\n";
+    cout << "\t\t|  " << board[0][0] << "  |  " << board[0][1] << "  |  " << board[0][2] << "  |\n";
     cout << "\t\t|_____|_____|_____|\n";
     
 }
@@ -79,7 +78,7 @@ void playerTurn() {
         playerTurn();
     }
     /* Ends */
-   showBoard();
+  // showBoard();
 }
 
 //Function to get the game status e.g. GAME WON, GAME DRAW GAME IN CONTINUE MODE
