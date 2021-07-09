@@ -12,25 +12,28 @@ bool draw = false;
 
 //Function to show the current status of the gaming board
 
-void display_board() {
+void showBoard() {
 
     //Rander Game Board LAYOUT
 
     cout << "PLAYER - 1 [X]\t PLAYER - 2 [O]\n\n";
-    cout << "\t\t     |     |     \n";
-    cout << "\t\t   " << board[0][0] << "  | " << board[0][1] << "  |  " << board[0][2] << "\n";
-    cout << "\t\t_____|_____|_____\n";
-    cout << "\t\t     |     |     \n";
-    cout << "\t\t   " << board[1][0] << "  | " << board[1][1] << "  |  " << board[1][2] << "\n";
-    cout << "\t\t_____|_____|_____\n";
-    cout << "\t\t     |     |     \n";
-    cout << "\t\t   " << board[2][0] << "  | " << board[2][1] << "  |  " << board[2][2] << "\n";
-    cout << "\t\t     |     |     \n";
+    cout << "\t\t__________________\n";
+    cout << "\t\t|     |     |     | \n";
+    cout << "\t\t|  " << board[0][0] << "  |  " << board[0][1] << "  |  " << board[0][2] << "  |\n";
+    cout << "\t\t|_____|_____|_____|\n";
+    cout << "\t\t|     |     |     |\n";
+    cout << "\t\t|  " << board[1][0] << "  |  " << board[1][1] << "  |  " << board[1][2] << "  |\n";
+    cout << "\t\t|_____|_____|_____|\n";
+    cout << "\t\t|     |     |     |\n";
+    cout << "\t\t|  " << board[2][0] << "  |  " << board[2][1] << "  |  " << board[2][2] << "  |\n";
+    cout << "\t\t|_____|_____|_____|\n";
+    
 }
 
 //Function to get the player input and update the board
 
-void player_turn() {
+//this function will take the player input and then update the board
+void playerTurn() {
     if (turn == 'X') {
         cout << "\n\tPlayer - 1 [X] turn : ";
     }
@@ -73,15 +76,15 @@ void player_turn() {
     else {
         //if input position already filled
         cout << "Box already filled!\n Please choose another!!\n\n";
-        player_turn();
+        playerTurn();
     }
     /* Ends */
-    display_board();
+   showBoard();
 }
 
 //Function to get the game status e.g. GAME WON, GAME DRAW GAME IN CONTINUE MODE
 
-bool gameover() {
+bool endOfgame() {
     //checking the win for Simple Rows and Simple Column
     for (int i = 0; i < 3; i++)
         if (board[i][0] == board[i][1] && board[i][0] == board[i][2] || board[0][i] == board[1][i] && board[0][i] == board[2][i])
