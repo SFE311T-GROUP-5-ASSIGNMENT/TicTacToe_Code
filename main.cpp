@@ -8,8 +8,8 @@ https://github.com/Samkelomiles/Code_1/blob/0f55e49a677152ae72928919311a075209c0
 int main()
 {
     cout << "===== T I C K - T A C - T O E =====";
-    cout << "\n\t\t2 PLAYER GAME!!\n";
-    cout << "NB* Board layout configured according to standard NUMPAD layout\n\n";
+    cout << "\n\t\t--- 2 PLAYER GAME!! ---\n";
+    cout << "---NB* Board layout configured according to standard NUMPAD layout\n\n";
    
     while (endOfgame()) 
     {
