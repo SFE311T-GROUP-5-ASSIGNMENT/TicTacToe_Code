@@ -30,6 +30,7 @@ int main()
                  cout << "\n\nThis Game was a draw\n\n";
 
         cout << endl;
+        cout << "GAME OVER!!\n\nGoodbye----" << endl;
         system("pause");
 	return 0;
 }
