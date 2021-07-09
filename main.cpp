@@ -2,8 +2,8 @@
 
 int main()
 {
-    cout << "tttT I C K -- T A C -- T O E -- G A M Ettt";
-    cout << "nttttFOR 2 PLAYERSnttt";
+    cout << "=== T I C K -- T A C -- T O E -- G A M E ===";
+    cout << "\nttttFOR 2 PLAYERS\n";
     while (gameover()) {
         display_board();
         player_turn();
