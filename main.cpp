@@ -1,16 +1,15 @@
-/*This is a text-based game of tic-tac-toe. Tic-tac-toe or noughts and
-crosses is a game where two players take turns marking an empty cell in a 3 x
-3 grid with their respective tokens. Each player has either an X token or an O
-token. A player wins whenever they place three of their tokens in a horizontal,
-vertical, or diagonal row on the grid. A draw occurs when all the cells on the
-grid have been filled with tokens and neither player has won.*/
+/*Find description of code 
+at 
+https://github.com/Samkelomiles/Code_1/blob/0f55e49a677152ae72928919311a075209c02e50/README.md
+*/
 
 #include "back-end.h"
 
 int main()
 {
-    cout << "=== T I C K -- T A C -- T O E -- G A M E ===";
-    cout << "\n\t\t\t\tFOR 2 PLAYERS\n";
+    cout << "===== T I C K - T A C - T O E =====";
+    cout << "\n\t\t2 PLAYER GAME!!\n";
+    cout << "NB* Board layout configured according to standard NUMPAD layout\n\n";
    
     while (endOfgame()) 
     {
@@ -30,7 +29,7 @@ int main()
                  else
                  cout << "\n\nThis Game was a draw\n\n";
 
-
+        cout << endl;
         system("pause");
 	return 0;
 }

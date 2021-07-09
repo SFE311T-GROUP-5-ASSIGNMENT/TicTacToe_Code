@@ -13,9 +13,9 @@ bool draw = false;
 
 void showBoard() {
 
-    //Rander Game Board LAYOUT
-
-    cout << "PLAYER - 1 [X]\t PLAYER - 2 [O]\n\n";
+    //Dispay the layout of the baord
+    cout << "NB* Board layout configured according to standard NUMPAD layout\n\n";
+    cout << "PLAYER 1 [X]\t PLAYER  2 [O]\n\n";
     cout << "\t\t__________________\n";
     cout << "\t\t|     |     |     | \n";
     cout << "\t\t|  " << board[2][0] << "  |  " << board[2][1] << "  |  " << board[2][2] << "  |\n";
@@ -30,14 +30,13 @@ void showBoard() {
 }
 
 //Function to get the player input and update the board
-
 //this function will take the player input and then update the board
 void playerTurn() {
     if (turn == 'X') {
-        cout << "\n\tPlayer - 1 [X] turn : ";
+        cout << "\n\tPlayer 1 [X] turn : ";
     }
     else if (turn == 'O') {
-        cout << "\n\tPlayer - 2 [O] turn : ";
+        cout << "\n\tPlayer 2 [O] turn : ";
     }
     //Taking input from user
     //updating the board according to choice and reassigning the turn Start
@@ -57,23 +56,23 @@ void playerTurn() {
     case 8: row = 2; column = 1; break;
     case 9: row = 2; column = 2; break;
     default:
-        cout << "Invalid Move";
+        cout << "Invalid Entry";
     }
 
     if (turn == 'X' && board[row][column] != 'X' && board[row][column] != 'O') {
-        //updating the position for 'X' symbol if
-        //it is not already occupied
+        /*updating the position for 'X' symbol if
+        it is not already occupied*/
         board[row][column] = 'X';
         turn = 'O';
     }
     else if (turn == 'O' && board[row][column] != 'X' && board[row][column] != 'O') {
-        //updating the position for 'O' symbol if
-        //it is not already occupied
+        /*this will update the position for 'O' symbol if
+        it is not already occupied*/
         board[row][column] = 'O';
         turn = 'X';
     }
     else {
-        //if input position already filled
+        //checking if a position has been filled
         cout << "Box already filled!\n Please choose another!!\n\n";
         playerTurn();
     }
@@ -81,16 +80,15 @@ void playerTurn() {
   // showBoard();
 }
 
-//Function to get the game status e.g. GAME WON, GAME DRAW GAME IN CONTINUE MODE
-
+//This function is to determine the winner or whether the game is drawn
 bool endOfgame() {
+
     //checking the win for Simple Rows and Simple Column
     for (int i = 0; i < 3; i++)
         if (board[i][0] == board[i][1] && board[i][0] == board[i][2] || board[0][i] == board[1][i] && board[0][i] == board[2][i])
             return false;
 
     //checking the win for both diagonal
-
     if (board[0][0] == board[1][1] && board[0][0] == board[2][2] || board[0][2] == board[1][1] && board[0][2] == board[2][0])
         return false;
 
