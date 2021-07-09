@@ -16,15 +16,15 @@ void display_board() {
 
     //Rander Game Board LAYOUT
 
-    cout << "PLAYER - 1 [X]t PLAYER - 2 [O]nn";
+    cout << "PLAYER - 1 [X]\t PLAYER - 2 [O]\n\n";
     cout << "\t\t     |     |     \n";
-    cout << "\t\t  " << board[0][0] << "  | " << board[0][1] << "  |  " << board[0][2] << " \n";
+    cout << "\t\t   " << board[0][0] << "  | " << board[0][1] << "  |  " << board[0][2] << "\n";
     cout << "\t\t_____|_____|_____\n";
     cout << "\t\t     |     |     \n";
-    cout << "\t\t  " << board[1][0] << "  | " << board[1][1] << "  |  " << board[1][2] << " \n";
+    cout << "\t\t   " << board[1][0] << "  | " << board[1][1] << "  |  " << board[1][2] << "\n";
     cout << "\t\t_____|_____|_____\n";
     cout << "\t\t     |     |     \n";
-    cout << "\t\t  " << board[2][0] << "  | " << board[2][1] << "  |  " << board[2][2] << " \n";
+    cout << "\t\t   " << board[2][0] << "  | " << board[2][1] << "  |  " << board[2][2] << "\n";
     cout << "\t\t     |     |     \n";
 }
 
@@ -32,10 +32,10 @@ void display_board() {
 
 void player_turn() {
     if (turn == 'X') {
-        cout << "\ntPlayer - 1 [X] turn : ";
+        cout << "\n\tPlayer - 1 [X] turn : ";
     }
     else if (turn == 'O') {
-        cout << "\ntPlayer - 2 [O] turn : ";
+        cout << "\n\tPlayer - 2 [O] turn : ";
     }
     //Taking input from user
     //updating the board according to choice and reassigning the turn Start
@@ -72,7 +72,7 @@ void player_turn() {
     }
     else {
         //if input position already filled
-        cout << "Box already filled!n Please choose another!!\n\n";
+        cout << "Box already filled!\n Please choose another!!\n\n";
         player_turn();
     }
     /* Ends */
