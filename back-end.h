@@ -76,6 +76,8 @@ void playerTurn() {
         cout << "Box already filled!\n Please choose another!!\n\n";
         playerTurn();
     }
+
+    cout << endl;
     /* Ends */
   // showBoard();
 }
