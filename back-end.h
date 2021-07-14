@@ -41,8 +41,20 @@ void playerTurn() {
     //Taking input from user
     //updating the board according to choice and reassigning the turn Start
 
-    cin >> choice;
-
+//This while-loop will restrict user from entering a character 
+while (true)
+	{
+		cin >> choice;
+		if (!cin)
+		{
+			cout << "Wrong Choice. Enter again " << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			continue;
+		}
+		else break;
+	}//end while-loop
+    
     //switch case to get which row and column will be update
 
     switch (choice) {
